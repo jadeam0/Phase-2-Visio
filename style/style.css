@@ -1,0 +1,54 @@
+   * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+   }
+   
+   .navbar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    /* background-color: #333; */
+    padding: 14px 0;
+    margin: 0 7rem;
+   }
+   
+   .navbar a {
+    color: #333;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+   }
+
+   .navbar a img {
+    height: 40px;
+    margin: 5px 0;
+    fill: white;
+   }
+   
+   .toggle-button img {
+    width: 40px;
+    height: 40px;
+   }
+   
+   .logo {
+    margin-right: auto;
+   }
+   
+   @media screen and (max-width: 600px) {
+    .navbar {
+        margin: 0 3.5rem;
+       }
+
+    .navbar a:not(:first-child):not(.toggle-button) {
+       display: none;
+    }
+   
+    .navbar a.toggle-button {
+       display: flex;
+    }
+   }
+
+   /* Hero Banner */
+
+   
