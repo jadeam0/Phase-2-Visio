@@ -1,4 +1,4 @@
-   * {
+   body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -51,4 +51,79 @@
 
    /* Hero Banner */
 
-   
+   .blue-banner {
+      background-color: #244AC2;
+      color: white;
+      text-align: center;
+      font-size:large;
+      display: inline-block;
+      height: 3.5rem;
+      width: 30rem;
+      position: absolute;
+      left: 0%;
+      top: 57%;
+
+   }
+
+   .hero-img {
+         max-width: 70%;
+         height: auto;
+         display: block;
+         margin-left: auto;
+         margin-right: auto;
+         width: 100%;
+   }
+
+   .black-banner {
+      background-color: black;
+      display: inline-block;
+      height: 3.5rem;
+      width: 40rem;
+      z-index: -1;
+      position: absolute;
+      left: 55%;
+      top: 57%;
+   }
+
+   /* about sec */
+
+   .about-sec {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      padding: 2rem 4rem ;
+      margin: 0 4rem;
+   }
+
+   .about-text {
+      padding: 1rem 0rem 1rem 0rem;
+      margin: 0 5rem;
+      font-size:medium;
+   }
+
+   .about-img {
+      padding: 0rem 2rem 0rem 3rem;
+   }
+
+   /* col sec */
+
+   .col-sec {
+      display: grid;
+      grid-template-columns: auto auto auto;
+      grid-template-rows: auto;
+      justify-content: center;
+      gap: 1rem;
+      margin: 0 2rem 0rem 5rem;
+   }
+
+   .box1 {
+      background-color: #061C2C;
+      color: white;
+      height: 13rem;
+      width: 20rem;
+      padding: 2rem;
+    }
+
+    .box1 h3 {
+      margin: 0;
+    }
