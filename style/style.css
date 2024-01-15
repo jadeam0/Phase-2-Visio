@@ -1,3 +1,11 @@
+header {
+   overflow: hidden;
+   
+}  
+::-webkit-scrollbar{
+   display:  none;
+}
+
    body {
     margin: 0;
     padding: 0;
@@ -59,49 +67,42 @@
 
    /* Hero Banner */
 
-   .carousel {
+   .container {
+      width: 1400px;
+      margin: 0 10%;
+      /* overflow: auto; */
+  }
+  
+  .slider-inner {
+      width: 1100px;
+      height: 500px;
       position: relative;
       overflow: hidden;
-      width: 100%;
-      height: 300px;
-     }
-     
-     .slide {
-      position: absolute;
-      width: 100%;
-      height: 100%;
+      float: left;
+      padding: 3px;
+      /* border: #666 solid 1px; */
+  }
+  
+  .slider-inner img {
       display: none;
-      text-align: center;
-      /* line-height: 300px; */
-      font-size: 2em;
-      color: #FFF;
-     }
-     
-     .slide.active {
-      display: block;
-     }
-     
-     .carousel .next, .carousel .prev {
-      position: absolute;
-      top: 50%;
-      width: 50px;
-      height: 50px;
-      background: rgba(0, 0, 0, 0.5);
-      color: #FFF;
-      font-size: 2em;
-      line-height: 50px;
-      text-align: center;
+      width: 100%;
+      height: 600px;
+  }
+  
+  .slider-inner img.active {
+      display: inline-block;
+  }
+  
+  .next {
+      /* float: left; */
+      /* margin-top: 130px; */
       cursor: pointer;
-     }
-     
-     .carousel .next {
-      right: 0;
-     }
-     
-     .carousel .prev {
-      left: 0;
-     }
-
+      position: absolute;
+      left: 83%;
+      top: 57%;
+      /* margin-left: -77px; */
+      z-index: 100;
+  }
    .blue-banner {
       background-color: #244AC2;
       color: white;
@@ -112,15 +113,9 @@
       width: 30rem;
       position: absolute;
       left: 0%;
-      top: 57%;
+      top: 66%;
+      z-index: 2;
 
-   }
-
-   .hero-img {
-         max-width: 70%;
-         display: block;
-         margin-left: auto;
-         margin-right: auto;
    }
 
    .black-banner {
@@ -211,4 +206,12 @@
       justify-content: space-between;
       font-size: xx-small;
       padding: 2px 7px;
+    }
+
+
+    @media screen and (max-width: 1075px) {
+      .container {
+         width: 400px;
+         margin: 0 0;
+     }
     }

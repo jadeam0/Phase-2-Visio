@@ -1,31 +1,26 @@
-//index.js
-
-$(document).ready(function() {
-  $('.carousel .slide:first-child').addClass('active');
- 
-  // Next Slide
-  $('.carousel .next').click(function() {
-     var currentSlide = $('.carousel .slide.active');
-     var nextSlide = currentSlide.next();
- 
-     if(nextSlide.length === 0) {
-       nextSlide = $('.carousel .slide:first-child');
-     }
- 
-     currentSlide.removeClass('active');
-     nextSlide.addClass('active');
+$(document).ready(function(){
+  $('.next').on('click', function(){
+  var currentImg = $('.active');
+  var nextImg = currentImg.next();
+  if(nextImg.length){
+      currentImg.removeClass().css('z-index', -10);
+      nextImg.addClass('active').css('z-index', 10);
+  }
   });
- 
-  // Previous Slide
-  $('.carousel .prev').click(function() {
-     var currentSlide = $('.carousel .slide.active');
-     var prevSlide = currentSlide.prev();
- 
-     if(prevSlide.length === 0) {
-       prevSlide = $('.carousel .slide:last-child');
-     }
- 
-     currentSlide.removeClass('active');
-     prevSlide.addClass('active');
-  });
- });
+  $('.prev').on('click', function(){
+      var currentImg = $('.active');
+      var prevImg = currentImg.prev();
+      if(prevImg.length){
+          currentImg.removeClass().css('z-index', -10);
+          prevImg.addClass('active').css('z-index', 10);
+      }
+      });
+      $('.next').on('click', function(){
+          var currentSVG = $('.activeSVG');
+          var nextSVG = currentSVG.next();
+          if(nextSVG.length){
+              currentSVG.removeClass();
+              nextSVG.addClass('activeSVG');
+          }
+          });
+});
